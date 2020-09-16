@@ -1,0 +1,6 @@
+<h1>Welcome, Dr. <%= @doctor.name %></h1>
+<p>Your appointments for today:</p>
+
+<% @doctor.appointments.each do |appt| %>
+    <li><%= appt.datetime%> with <%= link_to appt.patient.name, appt.patient %></li>
+<% end %>
